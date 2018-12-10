@@ -15,14 +15,14 @@ public class Solution {
             
             String localName = atSplit[0];
             String domainName = atSplit[1];
-            
+            //implementing all the rules in the challenge
             localName = localName.replaceAll("\\.", "");
-            
+    
             localName = localName.split("\\+")[0];
             
             String formatEmail = localName+"@"+domainName;
             
-            
+            //grouping
             if(lm.containsKey(formatEmail)) {
                 
                 int keyVal = lm.get(formatEmail);
@@ -35,7 +35,7 @@ public class Solution {
                 
             }
         }
-        
+        //counting collections that are greater than one.
         int count = 0;
         for(Integer i : (Collection<Integer> )lm.values()) {
             
